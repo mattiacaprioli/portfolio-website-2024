@@ -1,7 +1,7 @@
 import React, {useState, useEffect} from 'react'
 
 // import Link
-import {Link, animateScroll as scroll} from 'react-scroll';
+import { animateScroll as scroll} from 'react-scroll';
 
 // import icon
 import { ChevronUpIcon } from '@heroicons/react/outline'

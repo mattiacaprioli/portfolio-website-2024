@@ -7,9 +7,6 @@ import {navigation} from '../data';
 import {XIcon} from '@heroicons/react/outline';
 import {MenuAlt3Icon} from '@heroicons/react/outline';
 
-// import compontents
-import Socials from './Socials';
-
 // import framer motion
 import { motion } from 'framer-motion';
 
