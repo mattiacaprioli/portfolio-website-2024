@@ -47,7 +47,7 @@ const Contact = () => {
                 Contact me
             </h2>
             <p className='subtitle'>
-              If you want to work with me, i will be happy to listen to your proposals.
+              If you want to work with me, I will be happy to listen to your proposals.
               Write to me by filling out the form below.
               I can't wait to create something new with you!
             </p>
