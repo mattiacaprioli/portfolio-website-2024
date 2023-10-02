@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-scroll'
 
 // import image
 import Image from '../assets/img/foto-pc.jpg'
@@ -21,7 +22,9 @@ function About() {
                       Feel free to contact me today to start a new collaboration!
                     </p>
                 </div>
-                <button className='btn btn-md bg-accent hover:bg-accent-hover transition-all'>Contact me</button>
+                <Link to="contact" spy={true} smooth={true} duration={500} className='btn btn-md bg-accent hover:bg-accent-hover md:btn-lg transition-all'>
+                  Work with me
+                </Link>
             </div>
         </div>
       </div>

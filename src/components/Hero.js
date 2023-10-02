@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-scroll'
 
 //import woman image
 import MenImg from '../assets/img/header-foto-personale.png';
@@ -15,7 +16,9 @@ const Hero = () => {
             <p className='pt-4 pb-8 md:pt-6 md:pb-12 max-w-[480px] text-lg text-center lg:text-left'>
             I specialize in developing creative and functional web solutions.
             </p>
-            <button className='btn btn-md bg-accent hover:bg-accent-hover md:btn-lg transition-all'>Work with me</button>
+            <Link to="contact" spy={true} smooth={true} duration={500} className='btn btn-md bg-accent hover:bg-accent-hover md:btn-lg transition-all'>
+              Work with me
+            </Link>
           </div>
           {/* right side DA DOVER SISTEMARE LA FOTO CON UNA PERSONALE!*/}
           <div className='hidden lg:flex flex-1 justify-end items-end h-full'>

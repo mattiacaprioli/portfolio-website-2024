@@ -1,9 +1,43 @@
-import React from 'react'
+import React, {useState} from 'react';
+import emailjs from '@emailjs/browser';
 
 // import contact data
 import {contact} from '../data';
 
 const Contact = () => {
+
+  const [name, setName] = useState('')
+  const [email, setEmail] = useState('')
+  const [message, setMessage] = useState('')
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    // My EmailJs service ID, template ID and Public Key
+    const serviceId = "service_portfolio2023" ;
+    const templateId = "template_luy6lee";
+    const publicKey = "OGnuFHdY1fKLv-NYe";
+
+    // Create a new object that contains dynamic template params
+    const templateParams = {
+      user_name: name,
+      user_email: email,
+      to_name: 'portfolio front end 2023',
+      message: message,
+    };
+
+    emailjs.send(serviceId, templateId, templateParams, publicKey)
+      .then((response) => {
+        alert("Your data has been successfully sent!");
+        setName('');
+        setEmail('');
+        setMessage('');
+      })
+      .catch((error) => {
+        alert("Something went wrong. ", error)
+      })
+  }
+
   return (
     <section className='section bg-primary' id='contact'>
       <div className='container mx-auto'>
@@ -38,13 +72,29 @@ const Contact = () => {
           </div>
 
           {/* from */}
-          <form className='space-y-8 w-full max-x-[780px]'>
+          <form onSubmit={handleSubmit} className='space-y-8 w-full max-x-[780px]'>
             <div className='flex gap-8'>
-              <input className='input' type='text' placeholder='Your name' />
-              <input className='input' type='email' placeholder='Your email'/>
+              <input
+                className='input' 
+                type='text' 
+                placeholder='Your name' 
+                value={name} 
+                onChange={(e) => setName(e.target.value)}
+              />
+              <input 
+                className='input' 
+                type='email' 
+                placeholder='Your email'
+                value={email} 
+                onChange={(e) => setEmail(e.target.value)}
+              />
             </div>
-            <input type='text' className='input' placeholder='Subject' />
-            <textarea className='textarea' placeholder='Your message'></textarea>
+            <textarea 
+              className='textarea' 
+              placeholder='Your message'
+              value={message} 
+              onChange={(e) => setMessage(e.target.value)}
+            ></textarea>
             <button className='btn btn-lg bg-accent hover:bg-accent-hover'>Send message</button>
           </form>
         </div>

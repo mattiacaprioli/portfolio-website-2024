@@ -1,9 +1,10 @@
 //  icons
 import {
-  FiYoutube,
+  // FiYoutube,
+  FiFacebook,
+  FiLinkedin,
   FiInstagram,
   FiGithub,
-  FiDribbble,
   FiLayout,
   FiSettings,
   FiPenTool,
@@ -48,10 +49,6 @@ export const navigation = [
     href: 'services',
   },
   {
-    name: 'testimonials',
-    href: 'testimonials',
-  },
-  {
     name: 'contact',
     href: 'contact',
   },
@@ -60,20 +57,20 @@ export const navigation = [
 // social
 export const social = [
   {
-    icon: <FiYoutube />,
-    href: '',
+    icon: <FiGithub />,
+    href: 'https://github.com/mattiacaprioli',
+  },
+  {
+    icon: <FiLinkedin />,
+    href: 'https://www.linkedin.com/in/mattia-caprioli/',
   },
   {
     icon: <FiInstagram />,
-    href: '',
+    href: 'https://www.instagram.com/mattiacaprioli/?igshid=YmMyMTA2M2Y%3D',
   },
   {
-    icon: <FiGithub />,
-    href: '',
-  },
-  {
-    icon: <FiDribbble />,
-    href: '',
+    icon: <FiFacebook />,
+    href: 'https://www.facebook.com/mattia.caprioli',
   },
 ];
 
@@ -84,30 +81,35 @@ export const projectsData = [
     image: Project1,
     name: 'Find your city',
     category: 'Javascript',
+    href: 'https://project-js-advanced.netlify.app/',
   },
   {
     id: '2',
     image: Project2,
     name: 'Meditation',
     category: 'React',
+    href: 'https://project-react-meditation.netlify.app/',
   },
   {
     id: '3',
     image: Project3,
     name: 'Tic Tac Toe',
     category: 'Vue',
+    href: 'https://project-vue-tictactoe.netlify.app/',
   },
   {
     id: '4',
     image: Project4,
     name: 'Dashboard Hotel',
     category: 'Vue',
+    href: 'https://dashboard-pomelia.netlify.app/',
   },
   {
     id: '5',
     image: Project5,
     name: 'Counter',
     category: 'Javascript',
+    href: 'https://counter-javascript01.netlify.app/',
   },
 ];
 
