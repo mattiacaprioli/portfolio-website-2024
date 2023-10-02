@@ -5,7 +5,7 @@ import Image from '../assets/img/foto-pc.jpg'
 
 function About() {
   return (
-    <section className='section bg-secondary'>
+    <section id='about' className='section bg-secondary'>
       <div className='container mx-auto'>
         <div className='flex flex-col xl:flex-row gap-24'>
             <img className='object-cover h-full w-[566px] md:mx-auto lg:mx-0 rounded-2xl' src={Image} alt='#'/>
@@ -16,8 +16,8 @@ function About() {
                     <hr className='mb-8 opacity-5' />
                     <p className='mb-8'>
                       My name is Mattia and I was born in Como (near Milan), Italy.
-                      I am a passionate web developer with a strong enthusiasm for creating extraordinary digital experiences.
-                      I specialize in designing and developing modern and engaging web interfaces.
+                      I am a passionate web developer, with a strong enthusiasm for creating extraordinary digital experiences.
+                      I design and develop modern and engaging web interfaces.
                       Feel free to contact me today to start a new collaboration!
                     </p>
                 </div>

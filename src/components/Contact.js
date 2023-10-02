@@ -13,7 +13,9 @@ const Contact = () => {
                 Contact me
             </h2>
             <p className='subtitle'>
-            Lorem ipsum dolor sit amet consesctured adimpising elit. quasi et blandir totam archictertur veritatis at, repudiandea sit id palceat aspernatur.
+              If you want to work with me, i will be happy to listen to your proposals.
+              Write to me by filling out the form below.
+              I can't wait to create something new with you!
             </p>
         </div>
 
