@@ -3,9 +3,6 @@ import React from 'react';
 // import social data
 import {social} from '../data';
 
-// import logo
-import Logo from '../assets/img/Logo-Mattia.png'
-
 const Footer = () => {
   return (
     <footer className='bg-tertiary py-12 md:py-6'>
@@ -26,11 +23,6 @@ const Footer = () => {
                         </a>
                     )
                 })}
-            </div>
-
-            {/* logo */}
-            <div>
-                <img className='md:h-20' src={Logo} alt='' />
             </div>
 
             {/* copyright */}
