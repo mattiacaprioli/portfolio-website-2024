@@ -12,7 +12,12 @@ function About() {
             <img className='object-cover h-full w-[566px] md:mx-auto lg:mx-0 rounded-2xl' src={Image} alt='#'/>
             <div className='flex flex-col items-center text-center lg:items-start lg:text-left'>
                 <div className='flex flex-col'>
-                    <h2 className='text-3xl lg:text-4xl font-medium lg:font-extrabold mb-3 before:content-about relative before:absolute before:opacity-40 before:-top-[2rem] before:hidden before:lg:block'>Me</h2>
+                <h2 className='text-3xl lg:text-4xl font-medium lg:font-extrabold mb-3 relative'>
+                  <span className='hidden lg:block before:content-about before:absolute before:opacity-40 before:-top-[2rem]'>
+                    Me
+                  </span>
+                  <span className='lg:hidden'>About Me</span>
+                </h2>
                     <p className='mb-4 text-accent'>Front End Development</p>
                     <hr className='mb-8 opacity-5' />
                     <p className='mb-8'>

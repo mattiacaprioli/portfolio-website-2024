@@ -10,7 +10,7 @@ const Services = () => {
         {/* section title */}
         <div className='flex flex-col items-center text-center mb-10'>
             <h2 className='section-title before:content-services relative before:absolute before:opacity-40 before:-top-[2rem] before:-left-28 before:hidden before:lg:block'>
-                What i do for clients
+                What I do for clients
             </h2>
         </div>
         {/* item grid */}
