@@ -19,6 +19,7 @@ import Project2 from './assets/img/projects/meditation.png';
 import Project3 from './assets/img/projects/tictactoe.png';
 import Project4 from './assets/img/projects/dashboard-hotel.png';
 import Project5 from './assets/img/projects/counter-javascript.png';
+import Project6 from './assets/img/projects/climate-dashboard.png'
 
 // skills images
 import SkillImg1 from './assets/img/skills/html5.png';
@@ -110,6 +111,13 @@ export const projectsData = [
     name: 'Counter',
     category: 'Javascript',
     href: 'https://counter-javascript01.netlify.app/',
+  },
+  {
+    id: '6',
+    image: Project6,
+    name: 'Climate Dashboard',
+    category: 'React',
+    href: 'https://climatedashboard.netlify.app/',
   },
 ];
 
