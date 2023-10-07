@@ -177,13 +177,13 @@ export const services = [
     icon: <FiSettings />,
     name: 'Web Development',
     description:
-      'Building robust and efficient web solutions that bring your ideas to life.',
+      'Build a robust and efficient web solutions that bring your ideas to life.',
   },
   {
     icon: <FiPenTool />,
     name: 'Branding',
     description:
-      'Creating unique and impactful brand identities to make your business stand out.',
+      'Create an unique and impactful brand identities to make your business stand out.',
   },
   {
     icon: <FiTag />,
