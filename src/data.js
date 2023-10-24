@@ -19,7 +19,8 @@ import Project2 from './assets/img/projects/meditation.png';
 import Project3 from './assets/img/projects/tictactoe.png';
 import Project4 from './assets/img/projects/dashboard-hotel.png';
 import Project5 from './assets/img/projects/counter-javascript.png';
-import Project6 from './assets/img/projects/climate-dashboard.png'
+import Project6 from './assets/img/projects/climate-dashboard.png';
+import Project7 from './assets/img/projects/explore-footer.png';
 
 // skills images
 import SkillImg1 from './assets/img/skills/html5.png';
@@ -118,6 +119,13 @@ export const projectsData = [
     name: 'Climate Dashboard',
     category: 'React',
     href: 'https://climatedashboard.netlify.app/',
+  },
+  {
+    id: '7',
+    image: Project7,
+    name: 'Explore Food',
+    category: 'React',
+    href: 'https://explorefood.netlify.app/',
   },
 ];
 
