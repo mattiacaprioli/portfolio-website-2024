@@ -2,7 +2,7 @@
 
 💾 Junior Front End Developer from Como, Italy 🍇 💻
 
-📝 Check out my Portfolio here: https://mattiacaprioliportfolio.netlify.app/👈🏻
+📝 Check out my Portfolio here: https://mattiacaprioliportfolio.netlify.app/ 👈🏻
 
 🚀 My skills: 
 <div>
