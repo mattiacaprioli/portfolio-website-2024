@@ -21,6 +21,7 @@ import Project4 from './assets/img/projects/dashboard-hotel.png';
 import Project5 from './assets/img/projects/counter-javascript.png';
 import Project6 from './assets/img/projects/climate-dashboard.png';
 import Project7 from './assets/img/projects/explore-footer.png';
+import Project8 from './assets/img/projects/TechTrend.png';
 
 // skills images
 import SkillImg1 from './assets/img/skills/html5.png';
@@ -126,6 +127,13 @@ export const projectsData = [
     name: 'Explore Food',
     category: 'React',
     href: 'https://explorefood.netlify.app/',
+  },
+  {
+    id: '8',
+    image: Project8,
+    name: 'TechTrend',
+    category: 'Vue',
+    href: 'https://techtrend.netlify.app/',
   },
 ];
 
