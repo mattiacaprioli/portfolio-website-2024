@@ -22,6 +22,7 @@ import Project5 from './assets/img/projects/counter-javascript.png';
 import Project6 from './assets/img/projects/climate-dashboard.png';
 import Project7 from './assets/img/projects/explore-footer.png';
 import Project8 from './assets/img/projects/TechTrend.png';
+import Project9 from './assets/img/projects/next-level-food.png';
 
 // skills images
 import SkillImg1 from './assets/img/skills/html5.png';
@@ -135,6 +136,13 @@ export const projectsData = [
     category: 'Vue',
     href: 'https://techtrend.netlify.app/',
   },
+  {
+    id: '9',
+    image: Project9,
+    name: 'Next Level Food',
+    category: 'Next',
+    href: 'https://techtrend.netlify.app/',
+  },
 ];
 
 // projects
@@ -147,6 +155,9 @@ export const projectsNav = [
   },
   {
     name: 'React',
+  },
+  {
+    name: 'Next',
   },
   {
     name: 'Vue',
