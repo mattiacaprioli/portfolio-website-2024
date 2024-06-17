@@ -141,7 +141,7 @@ export const projectsData = [
     image: Project9,
     name: 'Next Level Food',
     category: 'Next',
-    href: 'https://techtrend.netlify.app/',
+    href: 'https://next-level-food.netlify.app/',
   },
 ];
 
