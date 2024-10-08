@@ -1,42 +1,11 @@
-import React, {useState} from 'react';
-import emailjs from '@emailjs/browser';
+import React from 'react';
+import { useForm, ValidationError } from '@formspree/react';
 
 // import contact data
 import {contact} from '../data';
 
 const Contact = () => {
-
-  const [name, setName] = useState('')
-  const [email, setEmail] = useState('')
-  const [message, setMessage] = useState('')
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-
-    // My EmailJs service ID, template ID and Public Key
-    const serviceId = "service_portfolio2023" ;
-    const templateId = "template_luy6lee";
-    const publicKey = "OGnuFHdY1fKLv-NYe";
-
-    // Create a new object that contains dynamic template params
-    const templateParams = {
-      user_name: name,
-      user_email: email,
-      to_name: 'portfolio front end 2023',
-      message: message,
-    };
-
-    emailjs.send(serviceId, templateId, templateParams, publicKey)
-      .then((response) => {
-        alert("Your data has been successfully sent!");
-        setName('');
-        setEmail('');
-        setMessage('');
-      })
-      .catch((error) => {
-        alert("Something went wrong. ", error)
-      })
-  }
+  const [state, handleSubmit] = useForm("xwpkeybz");
 
   return (
     <section className='section bg-primary' id='contact'>
@@ -72,31 +41,54 @@ const Contact = () => {
           </div>
 
           {/* from */}
-          <form onSubmit={handleSubmit} className='space-y-8 w-full max-x-[780px]'>
-            <div className='flex gap-8'>
-              <input
-                className='input' 
-                type='text' 
-                placeholder='Your name' 
-                value={name} 
-                onChange={(e) => setName(e.target.value)}
-              />
-              <input 
-                className='input' 
-                type='email' 
-                placeholder='Your email'
-                value={email} 
-                onChange={(e) => setEmail(e.target.value)}
-              />
+          {state.succeeded ? (
+            <div className="flex items-center justify-center bg-green-100 border border-green-400 text-green-700 px-4 py-3 rounded relative mt-8 mb-8" role="alert">
+              <svg
+                className="fill-current w-6 h-6 mr-2"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 20 20"
+              >
+                <path d="M10 15l-5.5-5.5 1.41-1.41L10 12.17l7.09-7.09L18.5 6l-8.5 9z" />
+              </svg>
+              <p className="font-bold">Thanks for your message!</p>
+              <span className="block sm:inline">I'll get back to you soon.</span>
             </div>
-            <textarea 
-              className='textarea' 
-              placeholder='Your message'
-              value={message} 
-              onChange={(e) => setMessage(e.target.value)}
-            ></textarea>
-            <button className='btn btn-lg bg-accent hover:bg-accent-hover'>Send message</button>
-          </form>
+          ) : (
+            <form onSubmit={handleSubmit} className='space-y-8 w-full max-x-[780px]'>
+              <div className='flex gap-8'>
+                <input
+                  className='input'
+                  id="full-name" 
+                  type='text'
+                  placeholder='Your name'
+                  required
+                />
+                <input
+                  className='input'
+                  id='email'
+                  type='email'
+                  name='email'
+                  placeholder='Your email'
+                  required
+                />
+                <ValidationError 
+                  prefix="Email" 
+                  field="email"
+                  errors={state.errors}
+                />
+              </div>
+              <textarea
+                className='textarea'
+                id='message'
+                name='message'
+                placeholder='Your message'
+                required
+              />
+              <button className='btn btn-lg bg-accent hover:bg-accent-hover' type='submit' disabled={state.submitting}>
+                Send message
+              </button>
+            </form>
+          )}
         </div>
       </div>
     </section>
