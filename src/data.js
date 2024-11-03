@@ -14,11 +14,11 @@ import {
 } from 'react-icons/fi';
 
 // projects images
-import Project1 from './assets/img/projects/findYourCity.png';
+import Project1 from './assets/img/projects/miriamPortfolio.png';
 import Project2 from './assets/img/projects/meditation.png';
 import Project3 from './assets/img/projects/tictactoe.png';
 import Project4 from './assets/img/projects/dashboard-hotel.png';
-import Project5 from './assets/img/projects/counter-javascript.png';
+// import Project5 from './assets/img/projects/counter-javascript.png';
 import Project6 from './assets/img/projects/climate-dashboard.png';
 import Project7 from './assets/img/projects/explore-footer.png';
 import Project8 from './assets/img/projects/TechTrend.png';
@@ -83,9 +83,9 @@ export const projectsData = [
   {
     id: '1',
     image: Project1,
-    name: 'Find your city',
-    category: 'Javascript',
-    href: 'https://project-js-advanced.netlify.app/',
+    name: 'Miriam Portfolio',
+    category: 'Next',
+    href: 'https://miriamportfolio.netlify.app/',
   },
   {
     id: '2',
@@ -108,13 +108,13 @@ export const projectsData = [
     category: 'Vue',
     href: 'https://dashboard-pomelia.netlify.app/',
   },
-  {
-    id: '5',
-    image: Project5,
-    name: 'Counter',
-    category: 'Javascript',
-    href: 'https://counter-javascript01.netlify.app/',
-  },
+  // {
+  //   id: '5',
+  //   image: Project5,
+  //   name: 'Counter',
+  //   category: 'Javascript',
+  //   href: 'https://counter-javascript01.netlify.app/',
+  // },
   {
     id: '6',
     image: Project6,
@@ -149,9 +149,6 @@ export const projectsData = [
 export const projectsNav = [
   {
     name: 'all',
-  },
-  {
-    name: 'Javascript',
   },
   {
     name: 'React',
