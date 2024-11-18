@@ -5,10 +5,10 @@ import {
   FiLinkedin,
   FiInstagram,
   FiGithub,
-  FiLayout,
-  FiSettings,
-  FiPenTool,
-  FiTag,
+  FiCode,
+  FiSmartphone,
+  FiLayers,
+  FiTrendingUp,
   FiMail,
   FiMapPin,
 } from 'react-icons/fi';
@@ -33,6 +33,11 @@ import SkillImg5 from './assets/img/skills/redux.png';
 import SkillImg6 from './assets/img/skills/nextjs.png';
 import SkillImg7 from './assets/img/skills/vue.png';
 import SkillImg8 from './assets/img/skills/git.png';
+
+// experiences images
+import CertificatoS2I from './assets/img/experiences/certificatoS2I.jpg';
+import Wideread from './assets/img/experiences/wide.png';
+import Freelancer from './assets/img/experiences/freelancer.jpeg';
 
 // navigation
 export const navigation = [
@@ -82,10 +87,10 @@ export const social = [
 export const projectsData = [
   {
     id: '1',
-    image: Project1,
-    name: 'Miriam Portfolio',
+    image: Project5,
+    name: 'Ai Saas Landing Page',
     category: 'Next',
-    href: 'https://miriamportfolio.netlify.app/',
+    href: 'https://aisaaslandingpage.netlify.app/',
   },
   {
     id: '2',
@@ -110,10 +115,10 @@ export const projectsData = [
   },
   {
     id: '5',
-    image: Project5,
-    name: 'Ai Saas Landing Page',
+    image: Project1,
+    name: 'Miriam Portfolio',
     category: 'Next',
-    href: 'https://aisaaslandingpage.netlify.app/',
+    href: 'https://miriamportfolio.netlify.app/',
   },
   {
     id: '6',
@@ -161,6 +166,29 @@ export const projectsNav = [
   },
 ];
 
+export const experiences = [
+  {
+    year: '2024',
+    title: 'Freelancer Front-End Developer',
+    description: 'Opened my own business to offer front-end development services to a variety of clients.',
+    image: Freelancer,
+  },
+  {
+    year: '2023',
+    title: 'Front-End Developer at Wideread',
+    description: 'Started working at Wideread, contributing to the development of a new social network for the publishing industry.',
+    image: Wideread,
+    href: 'https://info.wideread.it/it/information',
+  },
+  {
+    year: '2023',
+    title: 'Front-End Certification',
+    description: 'Completed a comprehensive front-end development course, gaining a solid foundation in web technologies.',
+    image: CertificatoS2I,
+    href: 'https://www.start2impact.it/'
+  },
+];
+
 // skill
 export const skills = [
   {
@@ -192,28 +220,28 @@ export const skills = [
 // services
 export const services = [
   {
-    icon: <FiLayout />,
-    name: 'Web Design',
+    icon: <FiCode />,
+    name: 'Front-End Development',
     description:
-      'Crafting visually appealing and user-friendly web designs tailored to your needs.',
+      'Building responsive, accessible, and modern web applications using React, React Native, and Next.js.',
   },
   {
-    icon: <FiSettings />,
-    name: 'Web Development',
+    icon: <FiSmartphone />,
+    name: 'Mobile App Development',
     description:
-      'Build a robust and efficient web solutions that bring your ideas to life.',
+      'Creating high-quality mobile applications for iOS and Android with React Native, ensuring excellent performance and user experience.',
   },
   {
-    icon: <FiPenTool />,
-    name: 'Branding',
+    icon: <FiLayers />,
+    name: 'Component Design',
     description:
-      'Create an unique and impactful brand identities to make your business stand out.',
+      'Designing reusable and scalable UI components to accelerate development and maintain consistency across projects.',
   },
   {
-    icon: <FiTag />,
-    name: 'SEO',
+    icon: <FiTrendingUp />,
+    name: 'Performance Optimization',
     description:
-      'Optimizing your online presence to enhance visibility and attract more visitors.',
+      'Optimizing websites and apps for speed, SEO, and scalability to improve user engagement and search visibility.',
   },
 ];
 
@@ -223,7 +251,7 @@ export const contact = [
     icon: <FiMail />,
     title: 'Have a question?',
     subtitle: 'I am here to help you.',
-    description: 'Email me at capriolimattia1994@gmail.com',
+    description: '',
   },
   {
     icon: <FiMapPin />,
