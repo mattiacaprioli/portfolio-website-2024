@@ -25,9 +25,9 @@ import Project8 from './assets/img/projects/TechTrend.png';
 import Project9 from './assets/img/projects/next-level-food.png';
 
 // skills images
-import SkillImg1 from './assets/img/skills/html5.png';
-import SkillImg2 from './assets/img/skills/css3.png';
-import SkillImg3 from './assets/img/skills/js.png';
+import SkillImg1 from './assets/img/skills/js.png';
+import SkillImg2 from './assets/img/skills/node.webp';
+import SkillImg3 from './assets/img/skills/mongodb.png';
 import SkillImg4 from './assets/img/skills/reactjs.png';
 import SkillImg5 from './assets/img/skills/redux.png';
 import SkillImg6 from './assets/img/skills/nextjs.png';
