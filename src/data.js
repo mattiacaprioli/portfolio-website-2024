@@ -23,6 +23,7 @@ import Project6 from './assets/img/projects/climate-dashboard.png';
 import Project7 from './assets/img/projects/explore-footer.png';
 import Project8 from './assets/img/projects/TechTrend.png';
 import Project9 from './assets/img/projects/next-level-food.png';
+import Project10 from './assets/img/projects/micioSocial.png';
 
 // skills images
 import SkillImg1 from './assets/img/skills/js.png';
@@ -86,6 +87,13 @@ export const social = [
 // projects
 export const projectsData = [
   {
+    id: '0',
+    image: Project10,
+    name: 'MicioSocial App',
+    category: 'React Native',
+    href: 'https://github.com/mattiacaprioli/micio-social',
+  },
+  {
     id: '1',
     image: Project5,
     name: 'Ai Saas Landing Page',
@@ -99,20 +107,20 @@ export const projectsData = [
     category: 'React',
     href: 'https://project-react-meditation.netlify.app/',
   },
-  {
-    id: '3',
-    image: Project3,
-    name: 'Tic Tac Toe',
-    category: 'Vue',
-    href: 'https://project-vue-tictactoe.netlify.app/',
-  },
-  {
-    id: '4',
-    image: Project4,
-    name: 'Dashboard Hotel',
-    category: 'Vue',
-    href: 'https://dashboard-pomelia.netlify.app/',
-  },
+  // {
+  //   id: '3',
+  //   image: Project3,
+  //   name: 'Tic Tac Toe',
+  //   category: 'Vue',
+  //   href: 'https://project-vue-tictactoe.netlify.app/',
+  // },
+  // {
+  //   id: '4',
+  //   image: Project4,
+  //   name: 'Dashboard Hotel',
+  //   category: 'Vue',
+  //   href: 'https://dashboard-pomelia.netlify.app/',
+  // },
   {
     id: '5',
     image: Project1,
@@ -134,13 +142,13 @@ export const projectsData = [
     category: 'React',
     href: 'https://explorefood.netlify.app/',
   },
-  {
-    id: '8',
-    image: Project8,
-    name: 'TechTrend',
-    category: 'Vue',
-    href: 'https://techtrend.netlify.app/',
-  },
+  // {
+  //   id: '8',
+  //   image: Project8,
+  //   name: 'TechTrend',
+  //   category: 'Vue',
+  //   href: 'https://techtrend.netlify.app/',
+  // },
   {
     id: '9',
     image: Project9,
@@ -162,8 +170,11 @@ export const projectsNav = [
     name: 'Next',
   },
   {
-    name: 'Vue',
+    name: 'React Native',
   },
+  // {
+  //   name: 'Vue',
+  // },
 ];
 
 export const experiences = [
