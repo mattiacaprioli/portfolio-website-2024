@@ -16,12 +16,12 @@ import {
 // projects images
 import Project1 from './assets/img/projects/miriamPortfolio.png';
 import Project2 from './assets/img/projects/meditation.png';
-import Project3 from './assets/img/projects/tictactoe.png';
-import Project4 from './assets/img/projects/dashboard-hotel.png';
+// import Project3 from './assets/img/projects/tictactoe.png';
+// import Project4 from './assets/img/projects/dashboard-hotel.png';
 import Project5 from './assets/img/projects/AiSaasLandingPage.png';
 import Project6 from './assets/img/projects/climate-dashboard.png';
 import Project7 from './assets/img/projects/explore-footer.png';
-import Project8 from './assets/img/projects/TechTrend.png';
+// import Project8 from './assets/img/projects/TechTrend.png';
 import Project9 from './assets/img/projects/next-level-food.png';
 import Project10 from './assets/img/projects/micioSocial.png';
 
