@@ -38,7 +38,7 @@ import SkillImg8 from './assets/img/skills/git.png';
 // experiences images
 import CertificatoS2I from './assets/img/experiences/certificatoS2I.jpg';
 import Wideread from './assets/img/experiences/wide.png';
-import Freelancer from './assets/img/experiences/freelancer.jpeg';
+import Uidu from './assets/img/experiences/uidu.png';
 
 // navigation
 export const navigation = [
@@ -179,10 +179,11 @@ export const projectsNav = [
 
 export const experiences = [
   {
-    year: '2024',
-    title: 'Freelancer Front-End Developer',
-    description: 'Opened my own business to offer front-end development services to a variety of clients.',
-    image: Freelancer,
+    year: '2025',
+    title: 'Front-End Developer at Uidu',
+    description: 'Working as a front-end developer at Uidu, I am focused on creating innovative web and mobile applications.',
+    image: Uidu,
+    href: 'https://uidu.org/it',
   },
   {
     year: '2023',
