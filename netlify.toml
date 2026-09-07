@@ -1,3 +1,12 @@
+# Le impostazioni qui hanno la precedenza su quelle della dashboard Netlify.
+# Tenerle nel repo evita che il deploy dipenda da una configurazione fatta a
+# mano anni fa per Create React App, che pubblicava "build/" invece di "dist/".
+
 [build]
   command = "npm run build"
   publish = "dist"
+
+[build.environment]
+  # Vite 7 richiede Node ^20.19.0 || >=22.12.0. Senza questo pin, un sito
+  # creato nel 2023 builda con il Node di default di allora e fallisce.
+  NODE_VERSION = "22"
