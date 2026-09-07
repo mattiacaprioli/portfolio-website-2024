@@ -21,15 +21,17 @@ import Project7 from './assets/img/projects/explore-footer.webp';
 import Project9 from './assets/img/projects/next-level-food.webp';
 import Project10 from './assets/img/projects/micioSocial.webp';
 
-// skills images
-import SkillImg1 from './assets/img/skills/js.webp';
-import SkillImg2 from './assets/img/skills/node.webp';
-import SkillImg3 from './assets/img/skills/mongodb.webp';
-import SkillImg4 from './assets/img/skills/reactjs.webp';
-import SkillImg5 from './assets/img/skills/redux.webp';
-import SkillImg6 from './assets/img/skills/nextjs.webp';
-import SkillImg7 from './assets/img/skills/vue.webp';
-import SkillImg8 from './assets/img/skills/git.webp';
+// skills icons
+import {
+  SiJavascript,
+  SiTypescript,
+  SiReact,
+  SiNextdotjs,
+  SiRedux,
+  SiTailwindcss,
+  SiGit,
+} from 'react-icons/si';
+import { TbBrandReactNative } from 'react-icons/tb';
 
 // experiences images
 import CertificatoS2I from './assets/img/experiences/certificatoS2I.webp';
@@ -184,39 +186,47 @@ export const experiences = [
   },
 ];
 
-// skill
+// skill — `color` è il colore ufficiale del brand di ogni tecnologia
 export const skills = [
   {
     name: 'JavaScript',
-    image: SkillImg1,
+    icon: <SiJavascript />,
+    color: '#F7DF1E',
   },
   {
-    name: 'Node.js',
-    image: SkillImg2,
-  },
-  {
-    name: 'MongoDB',
-    image: SkillImg3,
+    name: 'TypeScript',
+    icon: <SiTypescript />,
+    color: '#3178C6',
   },
   {
     name: 'React',
-    image: SkillImg4,
+    icon: <SiReact />,
+    color: '#61DAFB',
   },
   {
-    name: 'Redux',
-    image: SkillImg5,
+    name: 'React Native',
+    icon: <TbBrandReactNative />,
+    color: '#61DAFB',
   },
   {
     name: 'Next.js',
-    image: SkillImg6,
+    icon: <SiNextdotjs />,
+    color: '#FFFFFF',
   },
   {
-    name: 'Vue.js',
-    image: SkillImg7,
+    name: 'Redux',
+    icon: <SiRedux />,
+    color: '#764ABC',
+  },
+  {
+    name: 'Tailwind CSS',
+    icon: <SiTailwindcss />,
+    color: '#06B6D4',
   },
   {
     name: 'Git',
-    image: SkillImg8,
+    icon: <SiGit />,
+    color: '#F05032',
   },
 ];
 

@@ -1,38 +1,59 @@
-﻿# Hi there! 👋🏻 I'm Mattia
+# Hi there! 👋🏻 I'm Mattia
 
-💾 Junior Front End Developer from Como, Italy 🍇 💻
+💾 Front-End Developer based in Rome, Italy 🍇 💻
 
-📝 Check out my Portfolio here: [https://mattiacaprioliportfolio.netlify.app/](https://mattiacaprioliportfolio.netlify.app/) 👈🏻
+📝 Check out my portfolio here: [mattiacaprioliportfolio.netlify.app](https://mattiacaprioliportfolio.netlify.app/) 👈🏻
 
-🚀 My skills: 
+## 🚀 Skills
 
-- HTML
-- CSS
 - JavaScript
-- React.js
-- React-Native
-- Redux
-- Next.js
-- Bootstrap
-- SASS
-- Tailwind
 - TypeScript
-- Git
-- Github
+- React
+- React Native
+- Next.js
+- Redux
+- Tailwind CSS
+- HTML & CSS
+- Git & GitHub
 
 ... and still learning more! 💡✨
 
----
+## 💼 Experience
 
-🇬🇧  
-I am a junior frontend web developer. I have a deep understanding of **HTML**, **CSS**, and **JavaScript**, as well as extensive experience using frameworks like **React.js**. I have demonstrated the ability to individually work on complex projects, quickly adapt to new technologies, and effectively collaborate with multidisciplinary teams. My linguistic experience has provided me with a unique perspective on the importance of intuitive design and a seamless user experience. I am passionate about the idea of transforming complex concepts into accessible and user-friendly solutions, leveraging my creativity to create websites that are not only aesthetically pleasing but also functional and effective, thanks to the use of libraries and preprocessors like **Bootstrap** and **SASS**.
-
-🇮🇹  
-*Sono una frontend web developer. Ho una conoscenza approfondita di **HTML**, **CSS** e **JavaScript**, oltre a una vasta esperienza nell'utilizzo di framework come **React.js**. Ho dimostrato capacità di lavorare su progetti complessi, adattarmi rapidamente alle nuove tecnologie e collaborare in modo efficace con team multidisciplinari. La mia esperienza linguistica mi ha fornito una prospettiva unica nel comprendere l'importanza di un design intuitivo e di un'esperienza utente fluida: mi appassiona l'idea di poter trasformare concetti complessi in soluzioni accessibili e user-friendly, mettendo in pratica la mia creatività per creare siti web che non solo siano esteticamente piacevoli, ma anche funzionali ed efficaci, grazie anche all’impiego di librerie e preprocessori come **Bootstrap** e **SASS**.*
+- **2025 — today** · Front-End Developer at [Uidu](https://uidu.org/it), building web and mobile applications
+- **2023 — 2025** · Front-End Developer at [Wideread](https://info.wideread.it/it/information), a social network for the publishing industry
+- **2023** · Front-End Development certification at [start2impact](https://www.start2impact.it/)
 
 ---
 
-You can reach me out here:
+🇬🇧
+I am a front-end developer. I have a solid understanding of **HTML**, **CSS**, **JavaScript** and **TypeScript**, along with extensive experience building applications with **React**, **React Native** and **Next.js**. I have worked on complex projects both independently and alongside multidisciplinary teams, and I adapt quickly to new technologies. I care about intuitive design and a smooth user experience: what I enjoy most is turning complex requirements into accessible, user-friendly solutions — interfaces that are not only pleasant to look at, but genuinely functional and effective.
 
-- 💼 LinkedIn: [https://www.linkedin.com/in/mattia-caprioli/](https://www.linkedin.com/in/mattia-caprioli/)
+🇮🇹
+*Sono un front-end developer. Ho una conoscenza solida di **HTML**, **CSS**, **JavaScript** e **TypeScript**, oltre a una vasta esperienza nello sviluppo di applicazioni con **React**, **React Native** e **Next.js**. Ho lavorato su progetti complessi sia in autonomia sia insieme a team multidisciplinari, e mi adatto rapidamente alle nuove tecnologie. Tengo molto al design intuitivo e a un'esperienza utente fluida: quello che mi appassiona di più è trasformare requisiti complessi in soluzioni accessibili e user-friendly — interfacce che non siano solo piacevoli da guardare, ma davvero funzionali ed efficaci.*
+
+---
+
+## 🛠️ About this repository
+
+This is the source of my portfolio website.
+
+**Stack:** [Vite](https://vite.dev/) · [React 19](https://react.dev/) · [Tailwind CSS](https://tailwindcss.com/) · [Framer Motion](https://motion.dev/) · [Formspree](https://formspree.io/)
+
+```bash
+npm install
+npm run dev      # dev server on http://localhost:5173
+npm run build    # production build into dist/
+npm run preview  # serve the production build locally
+npm run lint     # ESLint
+```
+
+Deployed on [Netlify](https://www.netlify.com/) — build settings live in `netlify.toml`.
+
+---
+
+## 📫 You can reach me here
+
+- 💼 LinkedIn: [mattia-caprioli](https://www.linkedin.com/in/mattia-caprioli/)
+- 🐙 GitHub: [mattiacaprioli](https://github.com/mattiacaprioli)
 - 📮 E-mail: [capriolimattia1994@gmail.com](mailto:capriolimattia1994@gmail.com)
