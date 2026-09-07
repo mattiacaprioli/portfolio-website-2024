@@ -38,7 +38,7 @@ I am a front-end developer. I have a solid understanding of **HTML**, **CSS**, *
 
 This is the source of my portfolio website.
 
-**Stack:** [Vite](https://vite.dev/) · [React 19](https://react.dev/) · [Tailwind CSS](https://tailwindcss.com/) · [Framer Motion](https://motion.dev/) · [Formspree](https://formspree.io/)
+**Stack:** [Vite](https://vite.dev/) · [React 19](https://react.dev/) · [Tailwind CSS 4](https://tailwindcss.com/) · [Framer Motion](https://motion.dev/) · [Formspree](https://formspree.io/)
 
 ```bash
 npm install

@@ -1,6 +1,70 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import 'tailwindcss';
+
+/* ---------------------------------------------------------------------------
+   Tema. In v4 la configurazione vive nel CSS: ogni variabile qui sotto
+   genera le utility corrispondenti (--color-primary -> bg-primary, text-primary...).
+   I breakpoint non sono dichiarati perche i default di v4 (640/768/1024/1280)
+   coincidono con quelli che il progetto usava, e 2xl non e mai usato.
+   --------------------------------------------------------------------------- */
+@theme {
+  --font-primary: 'Playfair Display', Georgia, serif;
+  --font-body: 'Work Sans', system-ui, sans-serif;
+
+  --color-primary: #050402;
+  --color-secondary: #1c1d24;
+  --color-tertiary: #131419;
+  --color-paragraph: #878e99;
+
+  /* L'accent fa due lavori con requisiti di contrasto opposti: come testo su
+     fondo scuro deve schiarirsi, come sfondo di un bottone con testo bianco
+     deve scurirsi. Un solo valore non puo soddisfare entrambi.
+     Contrasti: testo 4.61 sul fondo peggiore, bianco sui bottoni 4.62. */
+  --color-accent: #bd7539;
+  --color-accent-solid: #a56632;
+  --color-accent-solid-hover: #8e582b;
+}
+
+/* ---------------------------------------------------------------------------
+   v4 ha rimosso la chiave `container` dalla configurazione: il padding
+   orizzontale che il sito aveva (1rem, 3rem da lg) va ridichiarato qui,
+   altrimenti tutte le sezioni perdono i margini laterali.
+   --------------------------------------------------------------------------- */
+@utility container {
+  margin-inline: auto;
+  padding-inline: 1rem;
+  @variant lg {
+    padding-inline: 3rem;
+  }
+}
+
+/* ---------------------------------------------------------------------------
+   Scritte-contorno dietro i titoli di sezione. In v3 erano generate dalla
+   chiave `theme.extend.content`, che in v4 non esiste piu come namespace:
+   diventano utility custom, cosi il markup (`before:content-about`) non cambia.
+
+   Va impostata la variabile --tw-content, non la proprieta `content`: in v4
+   ogni utility `before:*` ridichiara `content: var(--tw-content)`, e quelle
+   con un breakpoint (`before:lg:block`, usato da Portfolio, Services e
+   Contact) vengono emesse dopo queste regole, azzerando un `content` scritto
+   direttamente. Passando dalla variabile, la url sopravvive a quelle
+   ridichiarazioni - e' il meccanismo che usava anche la v3.
+   --------------------------------------------------------------------------- */
+@utility content-about {
+  --tw-content: url('/outline-text/about.svg');
+  content: var(--tw-content);
+}
+@utility content-portfolio {
+  --tw-content: url('/outline-text/portfolio.svg');
+  content: var(--tw-content);
+}
+@utility content-services {
+  --tw-content: url('/outline-text/services.svg');
+  content: var(--tw-content);
+}
+@utility content-contact {
+  --tw-content: url('/outline-text/contact.svg');
+  content: var(--tw-content);
+}
 
 @layer base {
   body {
@@ -14,6 +78,9 @@
   h6 {
     @apply text-white font-primary;
   }
+}
+
+@layer components {
   .section {
     @apply py-12 lg:py-32;
   }
@@ -23,8 +90,10 @@
   .subtitle {
     @apply text-base text-paragraph mb-16 lg:mb-24 max-w-[520px];
   }
+  /* cursor-pointer e esplicito: la Preflight di v4 mette cursor:default sui
+     <button>, a differenza di v3. */
   .btn {
-    @apply py-4 px-7 font-medium text-white flex items-center justify-center rounded-sm hover:bg-accent-solid-hover transition-all;
+    @apply py-4 px-7 font-medium text-white flex items-center justify-center rounded-xs cursor-pointer hover:bg-accent-solid-hover transition-all;
   }
   .btn-lg {
     @apply h-[54px];
@@ -32,11 +101,15 @@
   .btn-md {
     @apply h-[48px];
   }
+  /* Niente outline-hidden qui: in v4 imposta --tw-outline-style:none, che e la
+     stessa variabile letta da focus:outline-1, quindi annullerebbe il ring di
+     focus. Non serve comunque: senza focus non c'e alcun outline, e la regola
+     :focus ne definisce larghezza, colore e stile. */
   .input {
-    @apply bg-secondary text-paragraph h-[60px] outline-none pl-6 w-full font-body text-[15px] rounded-sm focus:outline focus:outline-1 focus:outline-accent;
+    @apply bg-secondary text-paragraph h-[60px] pl-6 w-full font-body text-[15px] rounded-xs focus:outline-1 focus:outline-accent;
   }
   .textarea {
-    @apply bg-secondary resize-none w-full outline-none p-6 rounded-sm h-[200px] focus:outline focus:outline-1 focus:outline-accent;
+    @apply bg-secondary resize-none w-full p-6 rounded-xs h-[200px] focus:outline-1 focus:outline-accent;
   }
   .active {
     @apply text-accent;
@@ -62,4 +135,3 @@
 ::-webkit-scrollbar-thumb:hover {
   background: #181818;
 }
-

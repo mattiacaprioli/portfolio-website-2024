@@ -17,7 +17,7 @@ const Services = () => {
                 const {icon, name, description} = service;
                 return <div className='bg-secondary p-6 rounded-2xl shadow-lg hover:shadow-xl transition-shadow duration-300' key={index}>
                     {/* icon */}
-                    <div className='text-accent rounded-sm w-12 h-12 flex justify-center items-center mb-16 text-[28px]'>{icon}</div>
+                    <div className='text-accent rounded-xs w-12 h-12 flex justify-center items-center mb-16 text-[28px]'>{icon}</div>
                     <h3 className='text-xl font-medium mb-2'>{name}</h3>
                     <p>{description}</p>
                 </div>
