@@ -26,7 +26,7 @@ const Contact = () => {
             {contact.map((item, index) => {
               const {icon, title, subtitle, description} = item;
               return <div className='flex flex-col lg:flex-row gap-x-4' key={index}>
-                <div className='text-accent rounded-sm w-14 h-14 flex items-start justify-center mt-2 mb-4 lg:mb-0 text-2xl'>
+                <div className='text-accent rounded-xs w-14 h-14 flex items-start justify-center mt-2 mb-4 lg:mb-0 text-2xl'>
                   {icon}
                 </div>
                 <div>
@@ -40,7 +40,7 @@ const Contact = () => {
 
           {/* form */}
           {state.succeeded ? (
-            <div className="flex items-center justify-center bg-green-100 border border-green-400 text-green-700 px-4 py-3 rounded relative mt-8 mb-8" role="alert">
+            <div className="flex items-center justify-center bg-green-100 border border-green-400 text-green-700 px-4 py-3 rounded-sm relative mt-8 mb-8" role="alert">
               <svg
                 className="fill-current w-6 h-6 mr-2"
                 xmlns="http://www.w3.org/2000/svg"
