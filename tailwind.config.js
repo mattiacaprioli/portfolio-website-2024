@@ -29,9 +29,17 @@ export default {
         primary: '#050402',
         secondary: '#1C1D24',
         tertiary: '#131419',
+        // L'accent fa due lavori con requisiti di contrasto opposti:
+        // come testo su fondo scuro deve schiarirsi, come sfondo di un
+        // bottone con testo bianco deve scurirsi. Un solo valore non puo
+        // soddisfare entrambi, quindi sono due token.
         accent: {
-          DEFAULT: '#ac6b34',
-          hover: '#925a2b',
+          // primo piano: testo, icone, bordi, focus ring sui fondi scuri.
+          // Contrasto minimo 4.61 (su secondary #1C1D24, il fondo peggiore).
+          DEFAULT: '#bd7539',
+          // sfondo pieno dei bottoni, sempre con testo bianco sopra: 4.62.
+          solid: '#a56632',
+          'solid-hover': '#8e582b',
         },
         paragraph: '#878e99',
       },

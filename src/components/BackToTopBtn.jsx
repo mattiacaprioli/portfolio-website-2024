@@ -22,7 +22,7 @@ const BackToTopBtn = () => {
       <button
         onClick={() => scroll.scrollToTop()}
         aria-label='Back to top'
-        className='bg-accent w-12 h-12 hover:bg-accent-hover text-white rounded-full fixed right-10 bottom-10 cursor-pointer flex justify-center items-center transition-all'
+        className='bg-accent-solid w-12 h-12 hover:bg-accent-solid-hover text-white rounded-full fixed right-10 bottom-10 cursor-pointer flex justify-center items-center transition-all'
       >
         <FiChevronUp size={24} />
       </button>

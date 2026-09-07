@@ -15,7 +15,7 @@ const Hero = () => {
             <p className='pt-4 pb-8 md:pt-6 md:pb-12 max-w-[480px] text-lg text-center lg:text-left'>
             I am specialized in developing creative and functional web solutions.
             </p>
-            <Link to="contact" href="#contact" spy={true} smooth={true} duration={500} className='btn btn-md bg-accent hover:bg-accent-hover md:btn-lg transition-all cursor-pointer'>
+            <Link to="contact" href="#contact" spy={true} smooth={true} duration={500} className='btn btn-md bg-accent-solid hover:bg-accent-solid-hover md:btn-lg transition-all cursor-pointer'>
               Get in touch
             </Link>
           </div>
