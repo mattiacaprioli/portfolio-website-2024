@@ -27,7 +27,7 @@ const Footer = () => {
             </div>
 
             {/* copyright */}
-            <p>&copy; 2023 Mattia Caprioli. All right reserved.</p>
+            <p>&copy; {new Date().getFullYear()} Mattia Caprioli. All rights reserved.</p>
         </div>
       </div>
     </footer>
