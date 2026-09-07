@@ -105,7 +105,7 @@ const Contact = () => {
                   errors={state.errors}
                 />
               </div>
-              <button className='btn btn-lg bg-accent hover:bg-accent-hover' type='submit' disabled={state.submitting}>
+              <button className='btn btn-lg bg-accent-solid hover:bg-accent-solid-hover' type='submit' disabled={state.submitting}>
                 {state.submitting ? 'Sending…' : 'Send message'}
               </button>
             </form>
