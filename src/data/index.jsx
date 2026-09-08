@@ -13,13 +13,10 @@ import {
 } from 'react-icons/fi';
 
 // projects images
-import Project1 from '../assets/img/projects/miriamPortfolio.webp';
-import Project2 from '../assets/img/projects/meditation.webp';
-import Project5 from '../assets/img/projects/AiSaasLandingPage.webp';
-import Project6 from '../assets/img/projects/climate-dashboard.webp';
-import Project7 from '../assets/img/projects/explore-footer.webp';
-import Project9 from '../assets/img/projects/next-level-food.webp';
-import Project10 from '../assets/img/projects/micioSocial.webp';
+import MicioSocial from '../assets/img/projects/micioSocial.webp';
+import MiriamPortfolio from '../assets/img/projects/miriamPortfolio.webp';
+import ClimateDashboard from '../assets/img/projects/climate-dashboard.webp';
+import AiSaasLandingPage from '../assets/img/projects/AiSaasLandingPage.webp';
 
 // experiences images
 import CertificatoS2I from '../assets/img/experiences/certificatoS2I.webp';
@@ -42,10 +39,6 @@ export const navigation = [
   {
     name: 'experiences',
     href: 'experiences',
-  },
-  {
-    name: 'work',
-    href: 'work',
   },
   {
     name: 'portfolio',
@@ -86,66 +79,50 @@ export const social = [
 ];
 
 /* ---------------------------------------------------------------------------
-   Progetti piccoli (#portfolio). I lavori di peso stanno in `caseStudies`:
-   questi sono esercizi front-end, e la sezione li presenta come tali.
+   Progetti front-end precedenti (#portfolio). I due progetti recenti stanno in
+   `caseStudies`, il lavoro in azienda in `experiences`.
 
-   `category` e una sola etichetta da mostrare, non piu una chiave di filtro:
-   il filtro a tab e stato rimosso perche elencava solo framework front-end,
+   Restano solo i quattro che valgono. Gli esercizi da corso (Meditation,
+   Explore Food, Next Level Food) sono stati rimossi: un'immagine e cio che
+   data un progetto, e mostrarne sette abbassava la media di tutto il resto
+   della pagina.
+
+   `category` e una sola etichetta da mostrare, non una chiave di filtro: il
+   filtro a tab e stato rimosso perche elencava solo framework front-end,
    contraddicendo il posizionamento del resto del sito.
    --------------------------------------------------------------------------- */
 export const projectsData = [
   {
-    id: '0',
-    image: Project10,
+    id: 'micio-social',
+    image: MicioSocial,
     name: 'MicioSocial App',
     category: 'React Native',
     href: 'https://github.com/mattiacaprioli/micio-social',
   },
   {
-    id: '1',
-    image: Project5,
-    name: 'Ai Saas Landing Page',
-    category: 'Next.js',
-    href: 'https://aisaaslandingpage.netlify.app/',
-  },
-  {
-    id: '2',
-    image: Project2,
-    name: 'Meditation',
-    category: 'React',
-    href: 'https://project-react-meditation.netlify.app/',
-  },
-  {
-    id: '5',
-    image: Project1,
+    id: 'miriam-portfolio',
+    image: MiriamPortfolio,
     name: 'Miriam Portfolio',
     category: 'Next.js',
     href: 'https://miriamportfolio.netlify.app/',
   },
   {
-    id: '6',
-    image: Project6,
+    id: 'climate-dashboard',
+    image: ClimateDashboard,
     name: 'Climate Dashboard',
     category: 'React',
     href: 'https://climatedashboard.netlify.app/',
   },
   {
-    id: '7',
-    image: Project7,
-    name: 'Explore Food',
-    category: 'React',
-    href: 'https://explorefood.netlify.app/',
-  },
-  {
-    id: '9',
-    image: Project9,
-    name: 'Next Level Food',
+    id: 'ai-saas-landing-page',
+    image: AiSaasLandingPage,
+    name: 'Ai Saas Landing Page',
     category: 'Next.js',
-    href: 'https://next-level-food.netlify.app/',
+    href: 'https://aisaaslandingpage.netlify.app/',
   },
 ];
 
-/* Qui vive l'impiego. Uidu non ha un case study in #work di proposito: e
+/* Qui vive l'impiego. Uidu non ha un case study fra i progetti di proposito: e
    l'azienda per cui lavoro, non un mio progetto, e affiancarla ai progetti
    personali suggerirebbe una paternita che non c'e. Le chip di `stack` — campo
    opzionale — sono il modo di tenere visibili le tecnologie backend senza

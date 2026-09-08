@@ -6,15 +6,19 @@ import CaseStudy from './CaseStudy';
 const hashId = () => decodeURIComponent(window.location.hash.slice(1));
 const isKnown = (id) => caseStudies.some((study) => study.id === id);
 
-/* Deep link: /#uidu, /#claudio-brain, /#topwaitr aprono il case study
-   corrispondente. Serve perche un case study e la cosa che si incolla in una
-   candidatura, e con i <details> chiusi un'ancora nuda porterebbe a un titolo
-   senza contenuto. */
+/* Deep link: /#claudio-brain e /#topwaitr aprono il case study corrispondente.
+   Serve perche un case study e la cosa che si incolla in una candidatura, e con
+   i <details> chiusi un'ancora nuda porterebbe a un titolo senza contenuto.
+   Gli id stanno sui <details>, non sulla sezione, quindi restano validi anche
+   ora che questo blocco vive dentro #portfolio. */
 const initialOpen = () => {
   const id = hashId();
   return isKnown(id) ? { [id]: true } : {};
 };
 
+/* Non e una sezione a se: rende solo la lista dei case study, dentro
+   #portfolio. "Work" e "Portfolio" erano due etichette per un solo concetto —
+   progetti che ho costruito — e in nav non dicevano niente al visitatore. */
 const CaseStudies = () => {
   // derivato dall'hash al primo render, non impostato dentro un effetto:
   // cosi il <details> nasce gia aperto e non c'e un render a vuoto
@@ -73,27 +77,16 @@ const CaseStudies = () => {
     setOpen((prev) => (prev[id] === isOpen ? prev : { ...prev, [id]: isOpen }));
 
   return (
-    <section id='work' className='section bg-primary'>
-      <div className='container mx-auto'>
-        <div className='flex flex-col items-center text-center'>
-          <h2 className='section-title'>Things I built</h2>
-          <p className='subtitle'>
-            Two projects of my own, from the database up. Open either one for what is actually
-            inside.
-          </p>
-        </div>
-        <div className='flex flex-col gap-6 lg:gap-8'>
-          {caseStudies.map((study) => (
-            <CaseStudy
-              key={study.id}
-              item={study}
-              isOpen={Boolean(open[study.id])}
-              onToggle={handleToggle}
-            />
-          ))}
-        </div>
-      </div>
-    </section>
+    <div className='flex flex-col gap-6 lg:gap-8'>
+      {caseStudies.map((study) => (
+        <CaseStudy
+          key={study.id}
+          item={study}
+          isOpen={Boolean(open[study.id])}
+          onToggle={handleToggle}
+        />
+      ))}
+    </div>
   );
 };
 

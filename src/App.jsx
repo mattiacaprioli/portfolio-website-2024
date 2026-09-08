@@ -9,7 +9,6 @@ import Contact from './components/Contact';
 import Footer from './components/Footer';
 import BackToTopBtn from './components/BackToTopBtn';
 import Experiences from './components/Experiences';
-import CaseStudies from './components/CaseStudies';
 
 const App = () => {
   return (
@@ -20,7 +19,6 @@ const App = () => {
       <Skills />
       <About />
       <Experiences />
-      <CaseStudies />
       <Portfolio />
       <Services />
       <Contact />

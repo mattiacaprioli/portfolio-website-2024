@@ -6,7 +6,9 @@ import Project from './Project';
 
 const Projects = () => {
   return (
-    <section className='grid sm:grid-cols-2 lg:grid-cols-3 gap-y-12 lg:gap-x-8 lg:gap-y-8'>
+    /* 2 colonne da sm e 4 da xl: con quattro card, tre colonne lascerebbero un
+       orfano da solo sulla seconda riga. */
+    <section className='grid sm:grid-cols-2 xl:grid-cols-4 gap-y-12 sm:gap-x-8 lg:gap-y-10'>
       {projectsData.map((item) => {
         return <Project item={item} key={item.id} />;
       })}

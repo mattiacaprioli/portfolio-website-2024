@@ -3,9 +3,9 @@ import ClaudioBrain from '../assets/img/projects/claudio-brain.webp';
 
 /* ---------------------------------------------------------------------------
    Case study: i due progetti che ho costruito io e che una card con immagine e
-   titolo non puo raccontare. Ognuno diventa un <details> in #work, con l'`id`
-   usato sia come id del DOM sia come target dell'hash (/#claudio-brain,
-   /#topwaitr).
+   titolo non puo raccontare. Ognuno diventa un <details> in #portfolio, con
+   l'`id` usato sia come id del DOM sia come target dell'hash
+   (/#claudio-brain, /#topwaitr).
 
    Qui dentro va SOLO roba mia. Il lavoro in Uidu sta in `experiences`: e un
    impiego, non un mio progetto, e affiancarlo a questi due suggerirebbe una
