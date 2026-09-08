@@ -25,13 +25,23 @@ function About() {
                   </span>
                   <span className='lg:hidden'>About Me</span>
                 </h2>
-                    <p className='mb-4 text-accent'>Front End Development</p>
+                    {/* Un elenco e una specifica; "Full-stack development"
+                        sarebbe un'autovalutazione. */}
+                    <p className='mb-4 text-accent'>React · React Native · Rails · GraphQL</p>
                     <hr className='mb-8 opacity-5' />
+                    <p className='mb-6'>
+                      My name is Mattia and I am based in Italy.
+                    </p>
+                    <p className='mb-6'>
+                      I started as a front-end developer and I still spend most of my time in
+                      React and React Native. Over the past year, though, most of my work has
+                      moved down the stack, and I would like to keep it that way: I would rather
+                      own a feature from the database column to the button that changes it.
+                    </p>
                     <p className='mb-8'>
-                      My name is Mattia and I was born in Como (near Milan), Italy.
-                      I am a passionate web developer, with a strong enthusiasm for creating extraordinary digital experiences.
-                      I design and develop modern and engaging web interfaces.
-                      Feel free to contact me today to start a new collaboration!
+                      Outside work I build things that teach me what the job does not — most
+                      recently an AI assistant with its own retrieval layer, and a robot it can
+                      move.
                     </p>
                 </div>
                 <Link to="contact" href="#contact" spy={true} smooth={true} duration={500} className='btn btn-md bg-accent-solid hover:bg-accent-solid-hover md:btn-lg transition-all cursor-pointer'>

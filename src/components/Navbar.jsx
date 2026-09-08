@@ -7,7 +7,9 @@ import { Link } from 'react-scroll'
 const Navbar = () => {
   return (
     <nav>
-      <ul className='flex space-x-8 capitalize text-[15px]'>
+      {/* space-x-6 fino a xl: con 7 voci e il logo da 262px, a 1024 lo spazio
+          da 2rem non ci sta. */}
+      <ul className='flex space-x-6 xl:space-x-8 capitalize text-[15px]'>
         {navigation.map((item, index) =>{
             return ( 
                 <li 

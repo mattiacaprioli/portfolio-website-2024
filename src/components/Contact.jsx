@@ -11,7 +11,7 @@ const Contact = () => {
       <div className='container mx-auto'>
         {/* section title */}
         <div className='flex flex-col items-center text-center'>
-            <h2 className='section-title before:content-contact relative before:absolute before:opacity-40 before:-top-7 before:-left-40 before:hidden before:lg:block'>
+            <h2 className='section-title before:content-contact relative before:absolute before:opacity-40 before:-top-7 before:left-1/2 before:-translate-x-1/2 before:hidden before:lg:block'>
                 Contact me
             </h2>
             <p className='subtitle'>

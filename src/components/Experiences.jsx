@@ -1,5 +1,7 @@
 import { experiences } from "../data";
 
+import TechChips from "./TechChips";
+
 const Experiences = () => {
   return (
     <section id="experiences" className="pb-12 lg:pb-32 bg-secondary">
@@ -43,6 +45,12 @@ const Experiences = () => {
               </h3>
               {/* Description */}
               <p className="text-gray-300">{experience.description}</p>
+
+              {/* mt-auto tiene le chip a filo in fondo, cosi le tre card della
+                  griglia restano allineate anche se solo una ha lo stack. */}
+              {experience.stack && (
+                <TechChips items={experience.stack} className="justify-center mt-auto pt-5" />
+              )}
             </div>
           ))}
         </div>

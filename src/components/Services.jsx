@@ -7,7 +7,12 @@ const Services = () => {
       <div className='container mx-auto'>
         {/* section title */}
         <div className='flex flex-col items-center text-center mb-10'>
-            <h2 className='section-title before:content-services relative before:absolute before:opacity-40 before:-top-[2rem] before:-left-28 before:hidden before:lg:block'>
+            {/* left-1/2 + -translate-x-1/2 invece di un offset fisso: la
+                scritta-contorno resta centrata sul titolo qualunque sia la
+                larghezza del testo e del breakpoint. Con `-left-28` era
+                fuori di ~77px, perche l'offset giusto dipende da
+                (larghezza titolo - larghezza svg) / 2. */}
+            <h2 className='section-title before:content-services relative before:absolute before:opacity-40 before:-top-[2rem] before:left-1/2 before:-translate-x-1/2 before:hidden before:lg:block'>
                 What I do
             </h2>
         </div>

@@ -6,37 +6,28 @@ import {
   FiGithub,
   FiCode,
   FiSmartphone,
-  FiLayers,
-  FiTrendingUp,
+  FiDatabase,
+  FiZap,
   FiMail,
   FiMapPin,
 } from 'react-icons/fi';
 
 // projects images
-import Project1 from './assets/img/projects/miriamPortfolio.webp';
-import Project2 from './assets/img/projects/meditation.webp';
-import Project5 from './assets/img/projects/AiSaasLandingPage.webp';
-import Project6 from './assets/img/projects/climate-dashboard.webp';
-import Project7 from './assets/img/projects/explore-footer.webp';
-import Project9 from './assets/img/projects/next-level-food.webp';
-import Project10 from './assets/img/projects/micioSocial.webp';
-
-// skills icons
-import {
-  SiJavascript,
-  SiTypescript,
-  SiReact,
-  SiNextdotjs,
-  SiRedux,
-  SiTailwindcss,
-  SiGit,
-} from 'react-icons/si';
-import { TbBrandReactNative } from 'react-icons/tb';
+import Project1 from '../assets/img/projects/miriamPortfolio.webp';
+import Project2 from '../assets/img/projects/meditation.webp';
+import Project5 from '../assets/img/projects/AiSaasLandingPage.webp';
+import Project6 from '../assets/img/projects/climate-dashboard.webp';
+import Project7 from '../assets/img/projects/explore-footer.webp';
+import Project9 from '../assets/img/projects/next-level-food.webp';
+import Project10 from '../assets/img/projects/micioSocial.webp';
 
 // experiences images
-import CertificatoS2I from './assets/img/experiences/certificatoS2I.webp';
-import Wideread from './assets/img/experiences/wide.webp';
-import Uidu from './assets/img/experiences/uidu.webp';
+import CertificatoS2I from '../assets/img/experiences/certificatoS2I.webp';
+import Wideread from '../assets/img/experiences/wide.webp';
+import Uidu from '../assets/img/experiences/uidu.webp';
+
+export { caseStudies } from './caseStudies';
+export { skillGroups } from './skills';
 
 // navigation
 export const navigation = [
@@ -51,6 +42,10 @@ export const navigation = [
   {
     name: 'experiences',
     href: 'experiences',
+  },
+  {
+    name: 'work',
+    href: 'work',
   },
   {
     name: 'portfolio',
@@ -90,7 +85,14 @@ export const social = [
   },
 ];
 
-// projects
+/* ---------------------------------------------------------------------------
+   Progetti piccoli (#portfolio). I lavori di peso stanno in `caseStudies`:
+   questi sono esercizi front-end, e la sezione li presenta come tali.
+
+   `category` e una sola etichetta da mostrare, non piu una chiave di filtro:
+   il filtro a tab e stato rimosso perche elencava solo framework front-end,
+   contraddicendo il posizionamento del resto del sito.
+   --------------------------------------------------------------------------- */
 export const projectsData = [
   {
     id: '0',
@@ -103,7 +105,7 @@ export const projectsData = [
     id: '1',
     image: Project5,
     name: 'Ai Saas Landing Page',
-    category: 'Next',
+    category: 'Next.js',
     href: 'https://aisaaslandingpage.netlify.app/',
   },
   {
@@ -117,7 +119,7 @@ export const projectsData = [
     id: '5',
     image: Project1,
     name: 'Miriam Portfolio',
-    category: 'Next',
+    category: 'Next.js',
     href: 'https://miriamportfolio.netlify.app/',
   },
   {
@@ -138,41 +140,32 @@ export const projectsData = [
     id: '9',
     image: Project9,
     name: 'Next Level Food',
-    category: 'Next',
+    category: 'Next.js',
     href: 'https://next-level-food.netlify.app/',
   },
 ];
 
-// projects
-export const projectsNav = [
-  {
-    name: 'all',
-  },
-  {
-    name: 'React',
-  },
-  {
-    name: 'Next',
-  },
-  {
-    name: 'React Native',
-  },
-];
-
+/* Qui vive l'impiego. Uidu non ha un case study in #work di proposito: e
+   l'azienda per cui lavoro, non un mio progetto, e affiancarla ai progetti
+   personali suggerirebbe una paternita che non c'e. Le chip di `stack` — campo
+   opzionale — sono il modo di tenere visibili le tecnologie backend senza
+   rivendicare il prodotto. */
 export const experiences = [
   {
-    year: '2025',
-    title: 'Front-End Developer at Uidu',
+    year: '2025 — now',
+    title: 'Full-Stack Developer at Uidu',
     description:
-      'Working as a front-end developer at Uidu, I am focused on creating innovative web and mobile applications.',
+      'A Rails and GraphQL backend plus the React Native app for an HR and workspace platform: shift planning, timesheets, a time clock, realtime chat, calendar sync.',
+    stack: ['Rails 8.1', 'graphql-ruby', 'Sidekiq', 'MySQL', 'React Native', 'Relay'],
     image: Uidu,
-    href: 'https://uidu.org/it',
+    href: 'https://uidu.org',
   },
   {
-    year: '2023',
+    year: '2023 — 2024',
     title: 'Front-End Developer at Wideread',
     description:
       'Started working at Wideread, contributing to the development of a new social network for the publishing industry.',
+    stack: ['React', 'React Native', 'MongoDB', 'NestJS', 'AWS'],
     image: Wideread,
     href: 'https://info.wideread.it/it/information',
   },
@@ -181,52 +174,9 @@ export const experiences = [
     title: 'Front-End Certification',
     description:
       'Completed a comprehensive front-end development course, gaining a solid foundation in web technologies.',
+    stack: ['HTML', 'CSS', 'JavaScript', 'React'],
     image: CertificatoS2I,
     href: 'https://www.start2impact.it/',
-  },
-];
-
-// skill — `color` è il colore ufficiale del brand di ogni tecnologia
-export const skills = [
-  {
-    name: 'JavaScript',
-    icon: <SiJavascript />,
-    color: '#F7DF1E',
-  },
-  {
-    name: 'TypeScript',
-    icon: <SiTypescript />,
-    color: '#3178C6',
-  },
-  {
-    name: 'React',
-    icon: <SiReact />,
-    color: '#61DAFB',
-  },
-  {
-    name: 'React Native',
-    icon: <TbBrandReactNative />,
-    color: '#61DAFB',
-  },
-  {
-    name: 'Next.js',
-    icon: <SiNextdotjs />,
-    color: '#FFFFFF',
-  },
-  {
-    name: 'Redux',
-    icon: <SiRedux />,
-    color: '#764ABC',
-  },
-  {
-    name: 'Tailwind CSS',
-    icon: <SiTailwindcss />,
-    color: '#06B6D4',
-  },
-  {
-    name: 'Git',
-    icon: <SiGit />,
-    color: '#F05032',
   },
 ];
 
@@ -234,7 +184,7 @@ export const skills = [
 export const services = [
   {
     icon: <FiCode />,
-    name: 'Front-End Development',
+    name: 'Web & mobile front end',
     description:
       'Building responsive, accessible, and modern web applications using React, React Native, and Next.js.',
   },
@@ -245,16 +195,16 @@ export const services = [
       'Creating high-quality mobile applications for iOS and Android with React Native, ensuring excellent performance and user experience.',
   },
   {
-    icon: <FiLayers />,
-    name: 'Component Design',
+    icon: <FiDatabase />,
+    name: 'APIs & data models',
     description:
-      'Designing reusable and scalable UI components to accelerate development and maintain consistency across projects.',
+      'GraphQL schemas, relational models on Postgres and MySQL, background jobs, and the migrations that get from one shape to the next.',
   },
   {
-    icon: <FiTrendingUp />,
-    name: 'Performance Optimization',
+    icon: <FiZap />,
+    name: 'Realtime features',
     description:
-      'Optimizing websites and apps for speed, SEO, and scalability to improve user engagement and search visibility.',
+      'Chat, presence and live updates over WebSockets and GraphQL subscriptions — including the offline, retry and duplicate cases.',
   },
 ];
 
@@ -269,7 +219,7 @@ export const contact = [
   {
     icon: <FiMapPin />,
     title: 'Location',
-    subtitle: 'Roma, Italia',
+    subtitle: 'Italy',
     description: 'Open to remote collaboration',
   },
 ];

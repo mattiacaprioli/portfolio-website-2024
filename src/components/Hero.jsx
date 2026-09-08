@@ -11,9 +11,13 @@ const Hero = () => {
           {/* left side */}
           <div className='flex-1 flex flex-col items-center lg:items-start'>
             <p className='text-lg text-accent mb-[22px]'>Hi, I’m Mattia</p>
-            <h1 className='text-4xl leading-[44px] md:text-5xl md:leading-tight lg:text-7xl lg:leading-[1.2] font-bold md:tracking-[-2px]'>I build & Design <br /> Web Interfaces.</h1>
-            <p className='pt-4 pb-8 md:pt-6 md:pb-12 max-w-[480px] text-lg text-center lg:text-left'>
-            I am specialized in developing creative and functional web solutions.
+            {/* lg:text-6xl e non 7xl: a 72px con tracking -2px la colonna
+                regge ~16 caratteri per riga, e "I build interfaces" ne ha 18. */}
+            <h1 className='text-4xl leading-[44px] md:text-5xl md:leading-tight lg:text-6xl lg:leading-[1.2] font-bold md:tracking-[-2px]'>I build interfaces <br /> and the systems <br /> behind them.</h1>
+            <p className='pt-4 pb-8 md:pt-6 md:pb-12 max-w-[520px] text-lg text-center lg:text-left'>
+            I started on the front end and moved into the back end without leaving it:
+            React and React Native on one side, Rails and GraphQL on the other.
+            Currently building an HR platform at Uidu.
             </p>
             <Link to="contact" href="#contact" spy={true} smooth={true} duration={500} className='btn btn-md bg-accent-solid hover:bg-accent-solid-hover md:btn-lg transition-all cursor-pointer'>
               Get in touch

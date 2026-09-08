@@ -28,16 +28,20 @@ const Header = () => {
         <Link to='home' href='#home' spy={true} smooth={true} duration={500} className='cursor-pointer' aria-label='Back to top'>
           <img className='h-14 w-auto' src={Logo} alt='Mattia Caprioli' width='500' height='107' />
         </Link>
+        {/* Nav desktop da xl, non da lg: fino a xl il container di Tailwind e
+            limitato a 1024px, quindi lo spazio utile e 928px contro i ~984
+            richiesti da logo + nav + social, e le tre parti si sovrappongono.
+            Sotto xl vale il menu a tutto schermo, che non ha questo limite. */}
         {/* nav */}
-        <div className='hidden lg:block'>
+        <div className='hidden xl:block'>
           <Navbar />
         </div>
         {/* socials */}
-        <div className='hidden lg:block'>
+        <div className='hidden xl:block'>
           <Socials />
         </div>
         {/* nav mobile */}
-        <div className='lg:hidden'>
+        <div className='xl:hidden'>
           <NavMobile />
         </div>
       </div>

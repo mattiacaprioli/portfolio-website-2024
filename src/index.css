@@ -114,6 +114,11 @@
   .active {
     @apply text-accent;
   }
+  /* `list-none` da solo non basta: WebKit disegna il triangolino con uno
+     pseudo-elemento proprietario, che Safari mostra comunque. */
+  summary::-webkit-details-marker {
+    display: none;
+  }
 }
 
 ::-webkit-scrollbar {
