@@ -1,5 +1,6 @@
 // case study images
 import ClaudioBrain from '../assets/img/projects/claudio-brain.webp';
+import TopWaitr from '../assets/img/projects/topwaitr.webp';
 
 /* ---------------------------------------------------------------------------
    Case study: i due progetti che ho costruito io e che una card con immagine e
@@ -57,30 +58,31 @@ export const caseStudies = [
     id: 'topwaitr',
     name: 'topWaitr',
     kind: 'product',
-    period: 'Jun — Jul 2026',
+    period: 'Jun — Sep 2026',
     role: 'Solo project',
     tagline:
-      'A shift marketplace for restaurants, with two sides: waiters finding work, owners staffing a service. Built entirely on Supabase.',
-    // TODO: screenshot in arrivo. Finche `image` e null la card rende la cover
-    // tipografica, che e una scelta visibile invece di un buco.
-    image: null,
-    imageAlt: null,
+      'Staff management for anyone who works in shifts: roster, schedule, hours and messages in one app, plus a browser dashboard for whoever plans the week. It was born in a dining room, but nothing in the model is restaurant-specific.',
+    image: TopWaitr,
+    imageAlt:
+      'topWaitr’s product page: the headline “I turni del tuo locale, in un posto solo” beside a phone showing the week strip and the day’s two shifts — lunch fully staffed, dinner still one person short.',
     links: [
+      { label: 'Product site', href: 'https://mattiacaprioli.github.io/topWaitr', kind: 'live' },
       { label: 'Source', href: 'https://github.com/mattiacaprioli/topWaitr', kind: 'repo' },
-      { label: 'Review page', href: 'https://mattiacaprioli.github.io/topWaitr', kind: 'page' },
     ],
     linksNote:
-      'Not on the stores yet. The review page expects a token from a waiter’s QR code, so opening it directly shows the expired-link state.',
+      'Not on the stores yet. The site is the product page: the dashboard behind it is account-only, so it opens on the sign-in screen.',
     contributions: [
-      'Two role-specific apps behind one Expo Router tree, with row-level security per role on every table.',
-      'Portable reviews: the customer scans the waiter’s QR code and rates them from a static web page, so the reputation follows the person.',
+      'Two role-specific apps behind one Expo Router tree — the person who works the shift, the venue that assigns it — with row-level security per role on every table.',
+      'One dataset, two surfaces: the phone for everyone, the browser for whoever plans, with a drag-and-drop week, duplication of the previous one, and print and CSV export.',
+      'Hours count themselves: a confirmed shift becomes worked time, and someone on the roster of two venues stays one person with a single monthly total.',
       'Push notifications with no backend of my own: a database trigger calls a Deno Edge Function through pg_net, which batches to the Expo Push API.',
-      'The owner side: roster and invites, coverage requirements per role, no-show marking, and hours worked with PDF and CSV export.',
     ],
     stack: [
       'Expo SDK 56',
       'React Native',
       'expo-router',
+      'React 19',
+      'Vite',
       'Supabase',
       'RLS',
       'Deno Edge Functions',
