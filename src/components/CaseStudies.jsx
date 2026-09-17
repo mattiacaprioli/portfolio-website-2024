@@ -3,10 +3,18 @@ import { useEffect, useState } from 'react';
 import { caseStudies } from '../data';
 import CaseStudy from './CaseStudy';
 
-const hashId = () => decodeURIComponent(window.location.hash.slice(1));
+/* topWaitr si chiama KlokShift da settembre 2026, ma /#topwaitr e gia in giro
+   nelle candidature mandate prima del rename: l'alias lo fa ancora atterrare
+   sulla card giusta invece che su #portfolio chiuso. */
+const LEGACY_IDS = { topwaitr: 'klokshift' };
+
+const hashId = () => {
+  const raw = decodeURIComponent(window.location.hash.slice(1));
+  return LEGACY_IDS[raw] ?? raw;
+};
 const isKnown = (id) => caseStudies.some((study) => study.id === id);
 
-/* Deep link: /#claudio-brain e /#topwaitr aprono il case study corrispondente.
+/* Deep link: /#claudio-brain e /#klokshift aprono il case study corrispondente.
    Serve perche un case study e la cosa che si incolla in una candidatura, e con
    i <details> chiusi un'ancora nuda porterebbe a un titolo senza contenuto.
    Gli id stanno sui <details>, non sulla sezione, quindi restano validi anche

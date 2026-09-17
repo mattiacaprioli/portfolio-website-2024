@@ -25,7 +25,7 @@
 ## 🧩 Selected projects
 
 - **[Claudio](https://github.com/mattiacaprioli/claudio-brain)** — a personal AI assistant with conversational memory and hybrid retrieval over my own code, which also drives a Raspberry Pi robot. NestJS, Postgres with pgvector, Anthropic API; no LangChain and no ORM, on purpose. [Live demo](https://claudio-brain.vercel.app) (it replays recorded sessions — the backend runs on the robot).
-- **[topWaitr](https://github.com/mattiacaprioli/topWaitr)** — staff management for anyone who works in shifts: roster, schedule, hours and messages in one app, plus a browser dashboard for whoever plans the week. Expo and React Native on Supabase — row-level security per role, realtime chat, and push notifications sent from a Deno Edge Function that a database trigger invokes. [Product site](https://mattiacaprioli.github.io/topWaitr).
+- **[KlokShift](https://github.com/mattiacaprioli/KlokShift)** — staff management for anyone who works in shifts: roster, schedule, hours and messages in one app, plus a browser dashboard for whoever plans the week. Expo and React Native on Supabase — row-level security per role, realtime chat, and push notifications sent from a Deno Edge Function that a database trigger invokes. [klokshift.com](https://klokshift.com).
 
 ---
 

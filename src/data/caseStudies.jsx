@@ -1,12 +1,12 @@
 // case study images
 import ClaudioBrain from '../assets/img/projects/claudio-brain.webp';
-import TopWaitr from '../assets/img/projects/topwaitr.webp';
+import KlokShift from '../assets/img/projects/klokshift.webp';
 
 /* ---------------------------------------------------------------------------
    Case study: i due progetti che ho costruito io e che una card con immagine e
    titolo non puo raccontare. Ognuno diventa un <details> in #portfolio, con
    l'`id` usato sia come id del DOM sia come target dell'hash
-   (/#claudio-brain, /#topwaitr).
+   (/#claudio-brain, /#klokshift).
 
    Qui dentro va SOLO roba mia. Il lavoro in Uidu sta in `experiences`: e un
    impiego, non un mio progetto, e affiancarlo a questi due suggerirebbe una
@@ -55,19 +55,19 @@ export const caseStudies = [
     ],
   },
   {
-    id: 'topwaitr',
-    name: 'topWaitr',
+    id: 'klokshift',
+    name: 'KlokShift',
     kind: 'product',
     period: 'Jun — Sep 2026',
     role: 'Solo project',
     tagline:
       'Staff management for anyone who works in shifts: roster, schedule, hours and messages in one app, plus a browser dashboard for whoever plans the week. It was born in a dining room, but nothing in the model is restaurant-specific.',
-    image: TopWaitr,
+    image: KlokShift,
     imageAlt:
-      'topWaitr’s product page: the headline “I turni del tuo locale, in un posto solo” beside a phone showing the week strip and the day’s two shifts — lunch fully staffed, dinner still one person short.',
+      'KlokShift’s product page: the headline “I turni della tua sede, in un posto solo” beside a phone showing the week strip and the day’s two shifts — lunch fully staffed, dinner still one person short.',
     links: [
-      { label: 'Product site', href: 'https://mattiacaprioli.github.io/topWaitr', kind: 'live' },
-      { label: 'Source', href: 'https://github.com/mattiacaprioli/topWaitr', kind: 'repo' },
+      { label: 'Product site', href: 'https://klokshift.com', kind: 'live' },
+      { label: 'Source', href: 'https://github.com/mattiacaprioli/KlokShift', kind: 'repo' },
     ],
     linksNote:
       'Not on the stores yet. The site is the product page: the dashboard behind it is account-only, so it opens on the sign-in screen.',
